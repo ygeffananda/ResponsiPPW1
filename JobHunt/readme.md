@@ -61,6 +61,7 @@ Website Responsif Website yang dibuat dalam proyek ini menjawab kebutuhan dasar 
 Berikut adalah kode CSS:
 
 @media (max-width:768px){
+    
     #menu-btn{
         display: inline-block;
     }
@@ -87,6 +88,7 @@ Berikut adalah kode CSS:
 Berikut adalah kode HTML:
 
 <header class="header">
+    
     <section class="flex">
         <div id="menu-btn" class="fas fa-bars-staggered"></div>
         <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
@@ -107,6 +109,7 @@ Contoh kode CSS diatas digunakan untuk mengatur tampilan pada perangkat dengan l
 Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke pengguna menggunakan JavaScript. Berikut merupakan salah satu contoh kutipan kode yang menunjukan responsif kode untuk memberikan feedback ke pengguna:
 
 <div class="account-form-container">
+    
     <script>
     var form = document.querySelector('form');
       form.addEventListener('submit', function(event) {
@@ -134,6 +137,7 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
       confirmPasswordInput.value = '';
     });
 </script>
+    
     <section class="account-form">
         <form action="" method="post">
             <h3>create new account!</h3> 
