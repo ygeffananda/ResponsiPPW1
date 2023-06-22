@@ -85,7 +85,6 @@ Berikut adalah kode HTML:
 Berikut adalah kode CSS:
 
 @media (max-width:768px){
-
     #menu-btn{
         display: inline-block;
     }
@@ -138,8 +137,6 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
 
 </div>
 
-<script>
-
 var form = document.querySelector('form');
 
 form.addEventListener('submit', function(event) {
@@ -172,7 +169,6 @@ form.addEventListener('submit', function(event) {
   passwordInput.value = '';
   confirmPasswordInput.value = '';
 });
-</script>
 
 Kode tersebut merupakan markup dan skrip JavaScript yang mengimplementasikan formulir pendaftaran akun. Pada bagian HTML, kode tersebut menampilkan elemen-elemen yang terkait dengan formulir, seperti input untuk nama, email, dan password. Terdapat juga tombol untuk mengirimkan formulir.
 
