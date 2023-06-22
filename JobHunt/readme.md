@@ -1,10 +1,15 @@
-Nama Lengkap Yodhimas Geffananda 22/494737/SV/20902
+# Nama Lengkap Mahasiswa
+Nama    : Yodhimas Geffananda 
+NIM     : 22/494737/SV/20902
 
 **Note untuk melakukan registrasi terlebih dahulu
 
-Deskripsi Website Proyek akhir Praktikum Pemrograman Web.
+# Penjelasan Website Secara umum
 
-JobPortal adalah sebuah website yang bertujuan untuk membantu pengguna dalam mencari informasi tentang lowongan pekerjaan. Website ini dirancang untuk menjadi tempat terpusat yang menyediakan berbagai informasi pekerjaan dari berbagai perusahaan. JobPortal menyediakan fitur-fitur yang memudahkan pengguna dalam mencari pekerjaan yang sesuai dengan keahlian dan minat mereka.
+JobPortal adalah sebuah website yang bertujuan untuk membantu pengguna dalam mencari informasi tentang lowongan pekerjaan. JobPortal menyediakan fitur-fitur yang memudahkan pengguna dalam mencari pekerjaan yang sesuai dengan keahlian dan minat mereka.
+
+### Tujuan 
+Website ini dirancang untuk menjadi tempat terpusat yang menyediakan berbagai informasi pekerjaan dari berbagai perusahaan. 
 
 Kebutuhan klien untuk website JobPortal ini antara lain:
 1. Informasi Lowongan Pekerjaan: Klien ingin memiliki platform yang menyediakan informasi lengkap tentang lowongan pekerjaan dari berbagai perusahaan. Informasi yang disediakan meliputi judul pekerjaan, deskripsi pekerjaan, persyaratan, kualifikasi, gaji, lokasi, dan jenis pekerjaan.
@@ -22,6 +27,8 @@ Kebutuhan klien untuk website JobPortal ini antara lain:
 7. Integrasi Database: Klien membutuhkan integrasi database yang dapat menyimpan dan mengelola informasi lowongan pekerjaan, data pengguna, dan riwayat lamaran pekerjaan dengan efisien.
 
 
+### Permasalahan yang Dicover
+
 Website JobPortal ini bertujuan untuk menyelesaikan beberapa permasalahan terkait pencarian dan akses informasi lowongan pekerjaan, antara lain:
 1. Keterbatasan Akses Informasi: Website JobPortal menyediakan satu platform yang mengumpulkan informasi lowongan pekerjaan dari berbagai perusahaan. Hal ini mengatasi masalah di mana informasi lowongan pekerjaan tersebar di berbagai sumber, sehingga sulit bagi pencari kerja untuk melacak dan mengakses semua informasi yang relevan.
 
@@ -31,8 +38,8 @@ Website JobPortal ini bertujuan untuk menyelesaikan beberapa permasalahan terkai
 
 4. Keterbatasan Komunikasi dan Pengiriman Lamaran: Website JobPortal memungkinkan pencari kerja untuk mengirimkan lamaran pekerjaan secara online melalui platform tersebut. Ini mengatasi keterbatasan komunikasi dan proses pengiriman lamaran yang rumit atau memakan waktu, seperti pengiriman melalui surat pos atau email yang terpisah.
 
-
-Desain rapi mengikuti prinsip desain
+# Kriteria Penilaian (4 Requirement Dasar)
+### 1. Desain rapi mengikuti kaidah atau prinsip desain
 
 Desain web yang rapi mengikuti prinsip-prinsip desain dengan penuh perhatian terhadap detail dan kejelasan. Berikut adalah penjelasan lebih detail mengenai prinsip-prinsip desain yang diikuti dalam desain web yang rapi:
 
@@ -56,15 +63,41 @@ Desain web yang rapi mengikuti prinsip-prinsip desain dengan penuh perhatian ter
 
 10. Penggunaan Media yang Tepat: Desain web ini mempertimbangkan penggunaan media yang tepat. Gambar, video, dan elemen media lainnya digunakan secara strategis untuk memperkuat pesan, menarik perhatian, dan meningkatkan pengalaman pengguna. Penggunaan media yang relevan, berkualitas tinggi, dan ditempatkan dengan baik meningkatkan daya tarik visual dan efektivitas komunikasi.
 
+
+### 2. Website responsive, dapat diakses melalui device
 Website Responsif Website yang dibuat dalam proyek ini menjawab kebutuhan dasar dalam hal responsif dan dapat diakses melalui berbagai perangkat seperti laptop, mobile, dan tablet. Berikut adalah contoh kode yang menampilkan penggunaan responsif dalam tata letak website.
 
-Berikut adalah kode CSS:
-
-@media (max-width:768px){
+html
+<header class="header">
     
+    <section class="flex">
+
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+        <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
+        
+
+        <nav class="navbar">
+            <a href="home.php">home</a>
+            <a href="about.html">about us</a>
+            <a href="jobs.php">all jobs</a>
+            <a href="contact.php">contact us</a>
+            <a href="login.php">account</a>
+        </nav>
+
+        <a href="#" class="btn" style="margin-top: 0;">post job</a>
+    </section>
+
+</header>
+
+
+css
+@media (max-width:768px){
+
     #menu-btn{
         display: inline-block;
     }
+
     .header .flex .navbar{
         position: absolute;
         top: 99%;
@@ -76,68 +109,28 @@ Berikut adalah kode CSS:
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: .2s linear;
     }
+
     .header .flex .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
+
     .header .flex .navbar a{
         display: block;
         padding: 1.5rem 2rem;
     }
-    }
-
-Berikut adalah kode HTML:
-
-<header class="header">
-    
-    <section class="flex">
-        <div id="menu-btn" class="fas fa-bars-staggered"></div>
-        <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
-        <nav class="navbar">
-            <a href="home.php">home</a>
-            <a href="about.html">about us</a>
-            <a href="jobs.php">all jobs</a>
-            <a href="contact.php">contact us</a>
-            <a href="login.php">account</a>
-        </nav>
-        <a href="#" class="btn" style="margin-top: 0;">post job</a>
-    </section>
-</header>
-
+}
 
 Contoh kode CSS diatas digunakan untuk mengatur tampilan pada perangkat dengan lebar layar maksimum 768 piksel atau kurang. Ketika lebar layar mencapai batas tersebut, beberapa elemen seperti tombol menu, navigasi, dan link akan mengalami perubahan tampilan agar sesuai dengan tampilan yang diinginkan pada perangkat dengan ukuran layar yang lebih kecil, seperti tablet dan smartphone.
 
+
+### 3. Direct feedback ke pengguna website
 Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke pengguna menggunakan JavaScript. Berikut merupakan salah satu contoh kutipan kode yang menunjukan responsif kode untuk memberikan feedback ke pengguna:
 
+html
 <div class="account-form-container">
-    
-    <script>
-    var form = document.querySelector('form');
-      form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      var nameInput = document.querySelector('input[name="name"]');
-      var emailInput = document.querySelector('input[name="email"]');
-      var passwordInput = document.querySelector('input[name="pass"]');
-      var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
-      var name = nameInput.value;
-      var email = emailInput.value;
-      var password = passwordInput.value;
-      var confirmPassword = confirmPasswordInput.value;
-      if (name === '' || email === '' || password === '' || confirmPassword === '') {
-        alert('Harap isi semua field!');
-        return;
-      }
-      if (password !== confirmPassword) {
-        alert('Konfirmasi password tidak cocok!');
-        return;
-      }
-      alert('Registrasi berhasil!');
-      nameInput.value = '';
-      emailInput.value = '';
-      passwordInput.value = '';
-      confirmPasswordInput.value = '';
-    }); </script>
-    
+
     <section class="account-form">
+
         <form action="" method="post">
             <h3>create new account!</h3> 
             <input type="text" required name="name" maxlength="20" 
@@ -151,8 +144,46 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
             <p>already have an account? <a href="login.php">login now</a></p>
             <input type="submit" value="register now" name="submit" class="btn">
         </form>
+    
     </section>
 </div>
+
+javascript
+<script>
+
+var form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); 
+
+  var nameInput = document.querySelector('input[name="name"]');
+  var emailInput = document.querySelector('input[name="email"]');
+  var passwordInput = document.querySelector('input[name="pass"]');
+  var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
+
+  var name = nameInput.value;
+  var email = emailInput.value;
+  var password = passwordInput.value;
+  var confirmPassword = confirmPasswordInput.value;
+
+  if (name === '' || email === '' || password === '' || confirmPassword === '') {
+    alert('Harap isi semua field!');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert('Konfirmasi password tidak cocok!');
+    return;
+  }
+
+  alert('Registrasi berhasil!');
+
+  nameInput.value = '';
+  emailInput.value = '';
+  passwordInput.value = '';
+  confirmPasswordInput.value = '';
+});
+</script>
 
 Kode tersebut merupakan markup dan skrip JavaScript yang mengimplementasikan formulir pendaftaran akun. Pada bagian HTML, kode tersebut menampilkan elemen-elemen yang terkait dengan formulir, seperti input untuk nama, email, dan password. Terdapat juga tombol untuk mengirimkan formulir.
 
@@ -168,9 +199,11 @@ Kode diatas akan mengecek data pada kolom password apakah sama dengan kolom conf
 
 Dengan menggunakan kode ini, feedback langsung dapat diberikan kepada pengguna melalui pop-up alert menggunakan JavaScript. Hal ini membantu dalam memberikan informasi yang relevan kepada pengguna terkait keberhasilan atau kegagalan dari suatu tindakan yang dilakukan dalam website.
 
+
+### 4. Konten dinamis dari database
 Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requirement dasar Konten dinamis dari database. Berikut ini adalah kutipan kode yang menampilkan konten dinamis dari database:
 
-
+php
     <?php
         // Establish a connection to the MySQL database
         $host = 'localhost';
@@ -181,17 +214,21 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
+        
         // Fetch job card data from the database
         $sql = "SELECT * FROM jobcard";
         $result = mysqli_query($conn, $sql);
+        
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '
+                
                 <div class="box">
                     <div class="company">
                         <img src="images/' . $row['Logo'] . '.svg" alt="">
                         <div>
-                            <h3>' . $row['Company_Name'] . '</h3>      
+                            <h3>' . $row['Company_Name'] . '</h3>
+                            
                         </div>
                     </div>
                     <h3 class="job-title">' . $row['Job_Title'] . '</h3>
@@ -204,6 +241,8 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
                     </div>
                     <div class="flex-btn">
                     <a href="jobdetails.php?id_card=' . $row['id_card'] . '" class="btn">view details</a>
+
+
                         <button class="far fa-heart"></button>
                     </div>
                 </div>
@@ -212,6 +251,7 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
         } else {
             echo 'No jobs found.';
         }
+        
         mysqli_close($conn);
         ?>
 
