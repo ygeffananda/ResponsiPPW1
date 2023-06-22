@@ -59,12 +59,11 @@ Desain web yang rapi mengikuti prinsip-prinsip desain dengan penuh perhatian ter
 Website Responsif Website yang dibuat dalam proyek ini menjawab kebutuhan dasar dalam hal responsif dan dapat diakses melalui berbagai perangkat seperti laptop, mobile, dan tablet. Berikut adalah contoh kode yang menampilkan penggunaan responsif dalam tata letak website.
 
 Berikut adalah kode CSS:
-@media (max-width:768px){
 
+@media (max-width:768px){
     #menu-btn{
         display: inline-block;
     }
-
     .header .flex .navbar{
         position: absolute;
         top: 99%;
@@ -76,11 +75,9 @@ Berikut adalah kode CSS:
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: .2s linear;
     }
-
     .header .flex .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-
     .header .flex .navbar a{
         display: block;
         padding: 1.5rem 2rem;
@@ -90,14 +87,9 @@ Berikut adalah kode CSS:
 Berikut adalah kode HTML:
 
 <header class="header">
-    
     <section class="flex">
-
         <div id="menu-btn" class="fas fa-bars-staggered"></div>
-
         <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
-        
-
         <nav class="navbar">
             <a href="home.php">home</a>
             <a href="about.html">about us</a>
@@ -105,10 +97,8 @@ Berikut adalah kode HTML:
             <a href="contact.php">contact us</a>
             <a href="login.php">account</a>
         </nav>
-
         <a href="#" class="btn" style="margin-top: 0;">post job</a>
     </section>
-
 </header>
 
 
@@ -117,9 +107,34 @@ Contoh kode CSS diatas digunakan untuk mengatur tampilan pada perangkat dengan l
 Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke pengguna menggunakan JavaScript. Berikut merupakan salah satu contoh kutipan kode yang menunjukan responsif kode untuk memberikan feedback ke pengguna:
 
 <div class="account-form-container">
-
+    <script>
+    var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      var nameInput = document.querySelector('input[name="name"]');
+      var emailInput = document.querySelector('input[name="email"]');
+      var passwordInput = document.querySelector('input[name="pass"]');
+      var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
+      var name = nameInput.value;
+      var email = emailInput.value;
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
+      if (name === '' || email === '' || password === '' || confirmPassword === '') {
+        alert('Harap isi semua field!');
+        return;
+      }
+      if (password !== confirmPassword) {
+        alert('Konfirmasi password tidak cocok!');
+        return;
+      }
+      alert('Registrasi berhasil!');
+      nameInput.value = '';
+      emailInput.value = '';
+      passwordInput.value = '';
+      confirmPasswordInput.value = '';
+    });
+</script>
     <section class="account-form">
-
         <form action="" method="post">
             <h3>create new account!</h3> 
             <input type="text" required name="name" maxlength="20" 
@@ -133,47 +148,8 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
             <p>already have an account? <a href="login.php">login now</a></p>
             <input type="submit" value="register now" name="submit" class="btn">
         </form>
-    
     </section>
-
-<script>
-        var form = document.querySelector('form');
-    
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
-    
-      var nameInput = document.querySelector('input[name="name"]');
-      var emailInput = document.querySelector('input[name="email"]');
-      var passwordInput = document.querySelector('input[name="pass"]');
-      var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
-    
-      var name = nameInput.value;
-      var email = emailInput.value;
-      var password = passwordInput.value;
-      var confirmPassword = confirmPasswordInput.value;
-    
-      if (name === '' || email === '' || password === '' || confirmPassword === '') {
-        alert('Harap isi semua field!');
-        return;
-      }
-    
-      if (password !== confirmPassword) {
-        alert('Konfirmasi password tidak cocok!');
-        return;
-      }
-    
-      alert('Registrasi berhasil!');
-    
-      nameInput.value = '';
-      emailInput.value = '';
-      passwordInput.value = '';
-      confirmPasswordInput.value = '';
-    });
-</script>
 </div>
-
-
-
 
 Kode tersebut merupakan markup dan skrip JavaScript yang mengimplementasikan formulir pendaftaran akun. Pada bagian HTML, kode tersebut menampilkan elemen-elemen yang terkait dengan formulir, seperti input untuk nama, email, dan password. Terdapat juga tombol untuk mengirimkan formulir.
 
@@ -202,21 +178,17 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        
         // Fetch job card data from the database
         $sql = "SELECT * FROM jobcard";
         $result = mysqli_query($conn, $sql);
-        
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '
-                
                 <div class="box">
                     <div class="company">
                         <img src="images/' . $row['Logo'] . '.svg" alt="">
                         <div>
-                            <h3>' . $row['Company_Name'] . '</h3>
-                            
+                            <h3>' . $row['Company_Name'] . '</h3>      
                         </div>
                     </div>
                     <h3 class="job-title">' . $row['Job_Title'] . '</h3>
@@ -229,8 +201,6 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
                     </div>
                     <div class="flex-btn">
                     <a href="jobdetails.php?id_card=' . $row['id_card'] . '" class="btn">view details</a>
-
-
                         <button class="far fa-heart"></button>
                     </div>
                 </div>
@@ -239,7 +209,6 @@ Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requi
         } else {
             echo 'No jobs found.';
         }
-        
         mysqli_close($conn);
         ?>
 
