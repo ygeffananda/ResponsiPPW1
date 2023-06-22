@@ -83,7 +83,7 @@ Berikut adalah kode CSS:
         display: block;
         padding: 1.5rem 2rem;
     }
-}
+    }
 
 Berikut adalah kode HTML:
 
