@@ -135,8 +135,7 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
       emailInput.value = '';
       passwordInput.value = '';
       confirmPasswordInput.value = '';
-    });
-</script>
+    }); </script>
     
     <section class="account-form">
         <form action="" method="post">
