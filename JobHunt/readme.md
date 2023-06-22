@@ -126,7 +126,6 @@ Contoh kode CSS diatas digunakan untuk mengatur tampilan pada perangkat dengan l
 ### 3. Direct feedback ke pengguna website
 Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke pengguna menggunakan JavaScript. Berikut merupakan salah satu contoh kutipan kode yang menunjukan responsif kode untuk memberikan feedback ke pengguna:
 
-html
 <div class="account-form-container">
 
     <section class="account-form">
@@ -148,7 +147,6 @@ html
     </section>
 </div>
 
-javascript
 <script>
 
 var form = document.querySelector('form');
@@ -203,7 +201,6 @@ Dengan menggunakan kode ini, feedback langsung dapat diberikan kepada pengguna m
 ### 4. Konten dinamis dari database
 Konten dinamis dari database Website yang dibuat dalam proyek ini menjawab requirement dasar Konten dinamis dari database. Berikut ini adalah kutipan kode yang menampilkan konten dinamis dari database:
 
-php
     <?php
         // Establish a connection to the MySQL database
         $host = 'localhost';
