@@ -58,33 +58,9 @@ Desain web yang rapi mengikuti prinsip-prinsip desain dengan penuh perhatian ter
 
 Website Responsif Website yang dibuat dalam proyek ini menjawab kebutuhan dasar dalam hal responsif dan dapat diakses melalui berbagai perangkat seperti laptop, mobile, dan tablet. Berikut adalah contoh kode yang menampilkan penggunaan responsif dalam tata letak website.
 
-Berikut adalah kode HTML:
-
-<header class="header">
-    
-    <section class="flex">
-
-        <div id="menu-btn" class="fas fa-bars-staggered"></div>
-
-        <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
-        
-
-        <nav class="navbar">
-            <a href="home.php">home</a>
-            <a href="about.html">about us</a>
-            <a href="jobs.php">all jobs</a>
-            <a href="contact.php">contact us</a>
-            <a href="login.php">account</a>
-        </nav>
-
-        <a href="#" class="btn" style="margin-top: 0;">post job</a>
-    </section>
-
-</header>
-
 Berikut adalah kode CSS:
-
 @media (max-width:768px){
+
     #menu-btn{
         display: inline-block;
     }
@@ -111,6 +87,31 @@ Berikut adalah kode CSS:
     }
 }
 
+Berikut adalah kode HTML:
+
+<header class="header">
+    
+    <section class="flex">
+
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+        <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobPortal</a>
+        
+
+        <nav class="navbar">
+            <a href="home.php">home</a>
+            <a href="about.html">about us</a>
+            <a href="jobs.php">all jobs</a>
+            <a href="contact.php">contact us</a>
+            <a href="login.php">account</a>
+        </nav>
+
+        <a href="#" class="btn" style="margin-top: 0;">post job</a>
+    </section>
+
+</header>
+
+
 Contoh kode CSS diatas digunakan untuk mengatur tampilan pada perangkat dengan lebar layar maksimum 768 piksel atau kurang. Ketika lebar layar mencapai batas tersebut, beberapa elemen seperti tombol menu, navigasi, dan link akan mengalami perubahan tampilan agar sesuai dengan tampilan yang diinginkan pada perangkat dengan ukuran layar yang lebih kecil, seperti tablet dan smartphone.
 
 Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke pengguna menggunakan JavaScript. Berikut merupakan salah satu contoh kutipan kode yang menunjukan responsif kode untuk memberikan feedback ke pengguna:
@@ -135,40 +136,44 @@ Direct Feedback ke Pengguna Website yang dibuat memiliki direct feedback ke peng
     
     </section>
 
+<script>
+        var form = document.querySelector('form');
+    
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+    
+      var nameInput = document.querySelector('input[name="name"]');
+      var emailInput = document.querySelector('input[name="email"]');
+      var passwordInput = document.querySelector('input[name="pass"]');
+      var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
+    
+      var name = nameInput.value;
+      var email = emailInput.value;
+      var password = passwordInput.value;
+      var confirmPassword = confirmPasswordInput.value;
+    
+      if (name === '' || email === '' || password === '' || confirmPassword === '') {
+        alert('Harap isi semua field!');
+        return;
+      }
+    
+      if (password !== confirmPassword) {
+        alert('Konfirmasi password tidak cocok!');
+        return;
+      }
+    
+      alert('Registrasi berhasil!');
+    
+      nameInput.value = '';
+      emailInput.value = '';
+      passwordInput.value = '';
+      confirmPasswordInput.value = '';
+    });
+</script>
 </div>
 
-var form = document.querySelector('form');
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); 
 
-  var nameInput = document.querySelector('input[name="name"]');
-  var emailInput = document.querySelector('input[name="email"]');
-  var passwordInput = document.querySelector('input[name="pass"]');
-  var confirmPasswordInput = document.querySelector('input[name="c_pass"]');
-
-  var name = nameInput.value;
-  var email = emailInput.value;
-  var password = passwordInput.value;
-  var confirmPassword = confirmPasswordInput.value;
-
-  if (name === '' || email === '' || password === '' || confirmPassword === '') {
-    alert('Harap isi semua field!');
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert('Konfirmasi password tidak cocok!');
-    return;
-  }
-
-  alert('Registrasi berhasil!');
-
-  nameInput.value = '';
-  emailInput.value = '';
-  passwordInput.value = '';
-  confirmPasswordInput.value = '';
-});
 
 Kode tersebut merupakan markup dan skrip JavaScript yang mengimplementasikan formulir pendaftaran akun. Pada bagian HTML, kode tersebut menampilkan elemen-elemen yang terkait dengan formulir, seperti input untuk nama, email, dan password. Terdapat juga tombol untuk mengirimkan formulir.
 
