@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<header class="header">
+    
+    <section class="flex">
+
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+        <a href="home.php" class="logo"><i class="fas fa-briefcase"></i>JobHunt</a>
+        
+
+        <nav class="navbar">
+            <a href="home.php">home</a>
+            <a href="about.html">about us</a>
+            <a href="jobs.php">all jobs</a>
+            <a href="contact.html">contact us</a>
+            <a href="login.php">account</a>
+        </nav>
+
+        <a href="#" class="btn" style="margin-top: 0;">post job</a>
+    </section>
+
+</header>
+
+<div class="section-title">contact us</div>
+    
+    
+<section class="contact">
+    <div class="box-container">
+        
+        <div class="box">
+            <i class="fas fa-phone"></i>
+            <a href="tel:1234567890">123-456-7890</a>
+            <a href="tel:1112223333">111-222-3333</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:geffaproduction@gmail.com">geffaproduction@gmail.com</a>
+            <a href="mailto:yodhimas00@gmail.com">yodhimas00@gmail.com</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="#">flat no. 1, a-1 building, jogeshwari, mumbai, india - 400410</a>
+        </div>
+        
+    </div>
+
+    <form action="process_form.php" method="post" onsubmit="showPopup()">
+        <h3>drop your message</h3>
+        <div class="flex">
+            <div class="box">
+                <p>name <span>*</span></p>
+                <input type="text" name="name" required maxlength="20"
+                placeholder="enter your name" class="input">
+            </div>
+            <div class="box">
+                <p>email <span>*</span></p>
+                <input type="email" name="email" required maxlength="50"
+                placeholder="enter your email" class="input">
+            </div>
+            <div class="box">
+                <p>number <span>*</span></p>
+                <input type="number" name="number" required min="0"
+                maxlength="9999999999" placeholder="enter your number" class="input">
+            </div>
+            <div class="box">
+                <p>role <span>*</span></p>
+                <select name="role" required class="input">
+                    <option value="employee">job seeker (employee)</option>
+                    <option value="employeer">job provider (employeer)</option>
+                </select>
+
+            </div>
+        </div>
+        <p>message <span>*</span></p>
+        <textarea name="message" class="input" required maxlength="1000" 
+        placeholder="enter your message" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" name="send" class="btn">
+    </form>
+
+</section>
+
+
+<footer class="footer">
+
+    <section class="grid">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="home.php"><i class="fas fa-angle-right"> home </i></a>
+            <a href="about.html"><i class="fas fa-angle-right"> about </i></a>
+            <a href="jobs.php"><i class="fas fa-angle-right"> all jobs </i></a>
+            <a href="contact.php"><i class="fas fa-angle-right"> contact us </i></a>
+            <a href="#"><i class="fas fa-angle-right"> filter search </i></a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"><i class="fas fa-angle-right"> account </i></a>
+            <a href="login.php"><i class="fas fa-angle-right"> login </i></a>
+            <a href="register.php"><i class="fas fa-angle-right"> register </i></a>
+            <a href="#"><i class="fas fa-angle-right"> post job </i></a>
+            <a href="#"><i class="fas fa-angle-right"> dashboard </i></a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"> facebook </i></a>
+            <a href="#"><i class="fab fa-twitter"> twitter </i></a>
+            <a href="#"><i class="fab fa-instagram"> instagram </i></a>
+            <a href="#"><i class="fab fa-linkedin"> linkedin </i></a>
+            <a href="#"><i class="fab fa-youtube"> youtube </i></a>
+        </div>
+
+    </section>
+
+    <div class="credit">Copyright 2023 by <span> Geffa Production</span></div>
+
+</footer>
+
+
+<script>
+    function showPopup() {
+        alert("Pesan Anda telah terkirim dan tersimpan di database.");
+    }
+</script>
+
+</body>
+</html>
